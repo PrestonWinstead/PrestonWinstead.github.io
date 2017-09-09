@@ -149,19 +149,29 @@ function nonFriends(name, array) {
   var person = [];
   for(var i in array){
     namesArray.push(array[i]["name"]);
+    //console.log(namesArray);
   }
   for(var j in array){
     if(array[j]["name"] === name){
       tempPerson = Object.values(array[j]);
+      //console.log(tempPerson);
     }
   }
   person.push(tempPerson[0]);
   person.push(tempPerson[1][0]);
   person.push(tempPerson[1][1]);
-  for(var k = 0; k < person.length; k++){
-    for(var l = 0; l < namesArray.length; l++){
+//   console.log(person);
+//   console.log(namesArray);
+  for(var k = person.length; k > -1; k--){
+    for(var l = namesArray.length; l > -1; l--){
+//       console.log(person[k]);
+//       console.log(namesArray[l]);
       if(namesArray[l] === person[k]){
+//         console.log(namesArray[l]);
+//         console.log(person[k]);
         namesArray.splice(l, 1);
+//         console.log(namesArray);
+//         console.log(person);
       }
     }
   }
