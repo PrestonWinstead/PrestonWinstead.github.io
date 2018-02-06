@@ -1,102 +1,371 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Preston's Amazing Website</title>
-        <style>
-            body {
-                background: rgb(125, 198, 205);
-                color: rgb(45, 45, 45);
-                padding: 10px;
-                font-family: arial;
-            }
-            header {
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-            [id=all-contents] {
-                max-width: 800px;
-                margin: auto;
-            }
-    
-            /* navigation menu */
-            nav {
-                background: rgb(239, 80, 41);
-                margin: 0 auto;
-                margin-bottom: 20px;
-                display: flex;
-                padding: 10px;
-                border-radius: 7px;
-            }
-            nav header {
-                display: flex;
-                align-items: center;
-                color: rgb(255, 255, 255);
-                flex: 1;
-            }
-            nav ul {
-                list-style-image: none;
-            }
-            nav li {
-                display: inline-block;
-                padding: 0 10px;
-            }
-            nav a {
-                text-decoration: none;
-                color: #fff;
-            }
-    
-            /* main container area beneath menu */
-            main {
-                background: rgb(245, 238, 219);
-                display: flex;
-                border-radius: 7px;
-            }
-            [class=sidebar] {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            [class=sidebar] img {
-                width: 200px;
-            }
-            [class=content] {
-                flex: 1;
-                padding: 15px;
-            }
-            [class=interests] header {
-                font-size: 1.25em;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="all contents">
-         <nav>
-            <header>Preston's Wonderful Website</header>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="studies.html">Studies</a></li>
-            </ul>
-        </nav>
-            <main>
-                <div class="sidebar">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Long_Room_Interior%2C_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg"></img>
-                </div>
-                <div class="content">
-                    <header>Preston's Amazing Website</header>
-                    <p>Hello and welcome. My name is Preston. After seven years studying theology at Ouachita Baptist University, The Hebrew University of Jerusalem, and Cambridge, I've decided it's time for a change, so I'm learning how to write code. Wish me luck!</p>
-                    <section class="interests">
-                        <header>Interests</header>
-                        <ul>
-                            <li>Reading</li>
-                            <li>Technology</li>
-                            <li>Travel</li>
-                            <li>Languages</li>
-                            <li>Food</li>
-                            <li>Not running, but I do it anyway because I like food</li>
-                        </ul>
-                    </section>
-                </div>
-            </main>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>J Preston Winstead</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">J Preston
+            <span class="text-primary">Winstead</span>
+          </h1>
+          <div class="subheading mb-5">New Orleans, LA · +1 (479) 221-3852 ·
+            <a href="mailto:name@email.com">prestonwinstead@me.com</a>
+          </div>
+          <p class="mb-5">I am a full stack software engineer who excells in an agile environment. I'm passionate about designing applications that are fast, space efficient, and easy for the user.</p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="http://www.linkedin.com/in/preston-winstead">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://www.github.com/prestonwinstead">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
-    </body>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Robotics teacher</h3>
+              <div class="subheading mb-3">De La Salle High School</div>
+              <p>Taught students the fundamentals of coding logic by programming Arduino based robots. Assembled and tested all robots and helped students troubleshoot when they experienced problems.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2017 - October 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Education intern</h3>
+              <div class="subheading mb-3">First Baptist Church of Homer, LA</div>
+              <p>Developed communication and research skills by delivering multiple weekly Bible studies. Planned and led trips ranging from 5-20 students. Worked with a team to ensure the safety and enjoyment of students while they were in the youth group setting.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">May 2013 - August 2013 & May 2014 - August 2014</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Sales associate</h3>
+              <div class="subheading mb-3">The Woodsman Co.</div>
+              <p>Assisted customers in all aspects of selecting and purchasing outdoors gear. Helped with everything from deciding which jacket color looks best on a person to which climbing gear will be best suited to an intense, multi-day climbing trip.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">February 2009 - September 2010</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Operation Spark</h3>
+              <div class="subheading mb-3">Advanced Software Engineering Certificate</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2017-2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">The University of Cambridge</h3>
+              <div class="subheading mb-3">Master of Philosophy</div>
+              <div>Hebrew Bible</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2016-2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">The Hebrew University of Jerusalem</h3>
+              <div class="subheading mb-3">Master of Arts</div>
+              <div>Hebrew Bible</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2014-2016</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Ouachita Baptist University</h3>
+              <div class="subheading mb-3">Bachelor of Arts</div>
+              <div>Philosophy, Biblical Studies, and Biblical Languages</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2010-2014</span>
+              <p>Magna Cum Laude</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-npm"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-github"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-angular"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-react"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-backbone"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-sass"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-less"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-grunt"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-gulp"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-mysql"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-postgresql"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-nodejs"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bower"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-visualstudio"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-aws"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-digital-ocean"></i>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Test Driven Development</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Modular, Micro-Structure Code</li>
+            
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Projects</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Wander</h3>
+              <div class="subheading mb-3"><a href="http://exp.host/@prestonwinstead/wander">http://exp.host/@prestonwinstead/wander</a><p>(mobile)</p></div>
+              <div>Anyone who has visited an unfamiliar city has experienced the disorienting struggle of trying to find the things that will interest them while navigating a new public transit system in an unfamiliar culture, and possibly in an unfamiliar language. Wander is here to help. We implement machine learning algorithms to learn about your interests and build a trip tailored especially for you. We'll handle the transportation maps, tell you how much time you should plan for each spot, and give restaurant recommendations. All that you have to do is show up and Wander.</div>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Somm</h3>
+              <div class="subheading mb-3"><a href="somm.herokuapp.com">somm.herokuapp.com</a></div>
+              <div>The wine aisle can be as intimidating as it is exciting. All of those names and varietals and regions...to learn about all of it would take a lifetime. Somm makes it a little bit easier by filtering out all the clutter. With personalized tasting notes and information about the wine you're looking at, we give you exactly what you need to pick your next bottle.</div>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Battlecode</h3>
+              <div class="subheading mb-3"><a href="battlecode.info">battlecode.info</a></div>
+              <div>Want to prove that you're the best coder among your friends? Now you can! Create custom challenges and challenge your friends to a battle to prove your dominance. Just don't sink beneath the pressure of the timer!</div>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Finding Fido</h3>
+              <div class="subheading mb-3"><a href="findingfido.info">findingfido.info</a></div>
+              <div>Are you an animal lover who lives in a place where you can't have a pet? Are you a pet owner who can't always give your animal friend the attention they deserve? Finding Fido is here to help. We find pet owners and animal lovers in the same area and help them connect to share the love.</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>In addition to web development, I have many hobbies and interests. My background in academia has left me with a penchant for reading dry, boring books about linguistics or post-modern philosophy, but I also love novels and fantasy (I'm currently on a Terry Pratchett kick).</p>
+          <p>I love to see the intricacies of the world around me, whether that be the cultural and linguistic difference in another country, the way the ground bends and moves while on my mountain bike, or the beautiful rock formations I see while climbing. I try to bring these intricacies out in the work that I do and help other people see them. I want to design things that solve problems and help people see the beauty in the world.</p>
+        </div>
+      </section>
+<!-- 
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Google Analytics Certified Developer</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Mobile Web Specialist - Google Certification</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              2<sup>nd</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - James Buchanan High School - Hackathon 2006</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              3<sup>rd</sup>
+              Place - James Buchanan High School - Hackathon 2005</li>
+          </ul>
+        </div>
+      </section>
+ -->
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
 </html>
